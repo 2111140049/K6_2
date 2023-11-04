@@ -1,0 +1,18 @@
+<body>
+    <p>
+    <%= form_tag new_path, method: :post, data: { turbo: false } do %>
+    
+        <%= label_tag :mid, '商品名称' %>
+        <%= text_field_tag :mid %>
+        <%= label_tag :price, '商品価格' %>
+        <%= text_field_tag :price %>
+        <%= submit_tag  '登録'%>
+    <% end %>
+    </p>
+    <p>
+         <%=link_to '商品を追加する', "/show"%>
+    </p>
+    <p>
+         <%=link_to '商品を見る', "/main"%>
+    </p>
+</body>

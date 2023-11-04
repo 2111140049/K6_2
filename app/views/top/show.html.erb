@@ -1,0 +1,20 @@
+<body>
+     <% @CartItem .each do |e| %>
+      <p>
+        <% product = Product.find_by(id: e.prid) %>
+      　<% if product and e.cart_id%>
+        商品: <%= product.name %>
+        価格: <%= product.price %>円
+
+        <%='  :量'  %>
+        <%= e.qu %>
+        <% end %>
+      </p>
+    <% end %>
+    <p>
+         <%=link_to '商品を追加する', "/new"%>
+    </p>
+    <p>
+         <%=link_to '商品を見る', "/main"%>
+    </p>
+</body>

@@ -1,0 +1,21 @@
+<body>
+    <p>
+     <% @Product.each do |e| %>
+        <p>
+                <%='商品'%>
+                <%= e.name %>
+                <%=':価格'%>
+                <%= e.price %>
+                <%='円'%>
+                <%=link_to '削除', product_path(e.id), method: :delete %>
+                <%=link_to 'カート追加', add_path(id: e.id, qu: 1), method: :post%>
+        </p>
+    <% end %>
+    </p>
+    <p>
+         <%=link_to '商品を追加する', "/new"%>
+    </p>
+    <p>
+         <%=link_to 'カートを見る', "/show"%>
+    </p>
+</body>

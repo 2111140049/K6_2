@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prid: 1
+  cart_id: 1
+  qu: 1
+
+two:
+  prid: 1
+  cart_id: 1
+  qu: 1
